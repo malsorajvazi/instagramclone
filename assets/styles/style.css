@@ -35,7 +35,7 @@ main {
     align-items: center;
     border: 0.5px solid #DBDBDB;
     text-align: center;
-    padding: 35px 20px 25px 20px;
+    padding: 30px 20px 25px 20px;
 }
 
 .login-container--form input{
@@ -65,8 +65,29 @@ main {
     background-color: #49a0da;
 }
 
-.first-link {
-    border: 0.5px solid #DBDBDB;
+.lines {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.first-line {
+    border-top: 0.5px solid #DBDBDB;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100px;
+}
+
+
+
+.second-line {
+    border-top: 0.5px solid #DBDBDB;
+    margin-top: 20px;
+    width: 100px;
+    margin-right: 20px;
 }
 
 .login-container img {
@@ -88,6 +109,7 @@ main {
 
 .optional-login-links img {
     max-width: 16px;
+    margin-right:3px;
 }
 
 .facebook {
@@ -105,9 +127,11 @@ main {
     background-color: #ffff;
     align-items: center;
     border: 0.5px solid #DBDBDB;
-    padding: 5px 20px;
+    padding: 10px 20px;
     margin-top: 10px;
+    font-size: 13px;
 }
+
 
 .signup-container a {
     text-decoration: none;
@@ -135,12 +159,15 @@ main {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0;
+    text-align: center;
 }
 
 .navigation-links {
-    margin: 50px;
+    margin: 60px 50px 10px 50px;
 
 }
 
@@ -149,4 +176,68 @@ footer {
     font-size: 12px;
     color: grey;
     margin-right: 10px;
+}
+
+.language{
+    display: flex;
+    margin-bottom: 50px;
+    font-size: 12px;
+    color: grey;
+}
+
+select {
+    border: none;
+    margin-right: 10px;
+    color: grey;
+    cursor: pointer;
+}
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+
+    .images-container {
+        display: none;
+    }
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 310px;
+        background-color: #FAFAFA;
+        align-items: center;
+        border: none;
+        text-align: center;
+        padding: 5px 20px 25px 20px;
+    }
+
+    .signup-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+        max-width: 310px;
+        background-color: #FAFAFA;
+        align-items: center;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    footer {
+        text-align: center;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .navigation-links {
+        margin: 60px 15px 10px 15px;
+    }
+    
+
+}    
+
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+    .images-container {
+        display: none;
+    }
 }
